@@ -1,0 +1,24 @@
+* {
+    color: #00303f;
+}
+
+.frmstyle {
+    background-color: #DEEDF9;
+    padding: 10px 25px 40px 25px;
+    border-radius: 3%;
+    margin-top: 130px;
+}
+
+.logbtn {
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 100px;
+    border-radius: 12px;
+}
+
+.regbtn {
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 100px;
+    border-radius: 12px;
+}

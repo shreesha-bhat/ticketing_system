@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="col-md-4 offset-4 col-sm-4 offset-4 col-xs-4 offset-4">
+    <form class="col offset-0 col-xs-12 offset-0 frmstyle">
+        <div style="margin-left: 35%;margin-top: -100px;">
+            <img src="./assets/laptop.png">
+        </div>
+        <fieldset class="mt-5">
+            <legend class="text-center">
+                <b style="font-size: larger;">LOGIN</b>
+            </legend>
+            <div class="form-group">
+                <label>Username or Email ID</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" class="form-control mb-2">
+                <input type="checkbox">Remember me
+                <a routerLink='/forgot' style="float: right;"><u>Forgot your password?</u></a>
+            </div>
+
+            <button class=" btn btn-secondary btn-lg bg-success  logbtn" (click)="GoTopage('registerform')"><b style="color: white;">LOGIN</b></button><br>
+            <button class="btn btn-primary mt-3 btn-lg regbtn" (click)="GoTopage('registerinfo')"><b style="color: white;">Register Now</b></button>
+
+        </fieldset>
+    </form>
+</div>

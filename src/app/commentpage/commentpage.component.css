@@ -1,0 +1,90 @@
+.btn-arrow-right {
+    padding-left: 18px;
+    padding-right: 25px;
+    padding-left: 36px;
+}
+
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 35px;
+    height: 35px;
+    background: inherit;
+    border: inherit;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 0px 4px 0px 0px;
+    -webkit-border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg)
+}
+
+.btn-arrow-right:after {
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+    top: 395px;
+    right: 858px;
+    z-index: 1;
+}
+
+.btn-arrow-right:before {
+    left: 24px;
+    top: 395px;
+    background-color: white;
+}
+
+#bcrumb {
+    background-color: #F2F8FC;
+}
+
+.bckbtn {
+    font-size: larger;
+    color: #00303f;
+    font-weight: bolder;
+}
+
+.orghead {
+    margin-top: 30px;
+    margin-left: 700px
+}
+
+.frmstyle {
+    font-size: larger;
+    margin-right: -25px;
+}
+
+.formdiv {
+    border: 0.5mm solid #D6D6D6;
+    border-radius: 3mm;
+}
+
+.pstyle {
+    color: #00303f;
+    font-size: larger;
+}
+
+.divmuted {
+    column-span: 4;
+    float: right;
+}
+
+.hrline {
+    border: 0.5mm dashed #D6D6D6;
+}
+
+.postbtn {
+    background-color: #00303f;
+    float: right;
+    margin-top: 20px;
+    margin-right: 60px;
+    color: white;
+}

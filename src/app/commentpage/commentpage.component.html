@@ -1,0 +1,117 @@
+<app-header></app-header>
+
+<div class="row">
+    <div class="col-md-3">
+        <nav>
+            <ol class="breadcrumb " id="bcrumb">
+                <img src="./assets/laptop.png" width="25px" height="25px">
+                <li class="breadcrumb-item ml-2" class="text-danger">Ticketing System </li>
+                <li class="breadcrumb-item active"> Additional info..</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="col-md-8"></div>
+    <div class="col-md-1 float-right">
+        <button class="btn bckbtn" (click)="GoTopage('registerform')"><i class="fas fa-angle-left fa-lg"></i>&nbsp;<b style="font-size: large;">Back</b></button>
+    </div>
+</div>
+<div class="mt-4 offset-md-5">
+    <img src="./assets/laptop.png" width="200px" height="200px">
+</div>
+<div>
+    <h2 class="orghead"><b>Organization Ticket Issues</b></h2>
+</div>
+<div class="container col-md-7 mt-3">
+    <div class="container">
+        <form class="form-group frmstyle">
+            <fieldset style="border:0.5mm dashed #D6D6D6">
+                <legend>
+                    Ticket Information
+                </legend>
+                <div class="row">
+                    <dl class="dl-horizontal col-md-3 ml-3">
+                        <dt class="mt-2">Problem Statement</dt>
+                        <dt class="mt-3">Module</dt>
+                        <dt class="mt-3">Priority</dt>
+                        <dt style="margin-top: 30px;">Description</dt>
+                        <dt style="margin-top: 35px;">Created Date</dt>
+                        <dt class="mt-3">Updated Date</dt>
+                    </dl>
+                    <dl class="dl-horizontal col-md-1">
+                        <dt class="mt-2">:</dt>
+                        <dt class="mt-3">:</dt>
+                        <dt class="mt-3">:</dt>
+                        <dt style="margin-top: 30px;">:</dt>
+                        <dt style="margin-top: 30px;">:</dt>
+                        <dt class="mt-3">:</dt>
+                    </dl>
+                    <dl class="dl-horizontal col-md-8" style=" margin-left: -50px; ">
+                        <dd class="mt-2">Read/write converters not working</dd>
+                        <dd class="mt-3">Spring data MongoDB</dd>
+                        <dd class="mt-3">
+                            <div class="btn btn-danger"> High</div>
+                        </dd>
+                        <dd class="mt-3">Converter although it doesn't convert from a store-supported type .You might want to check you annota&on setup at the converter implementation.</dd>
+                        <dd class="mt-0">12/Dec/19 2:46 PM</dd>
+                        <dd class="mt-3">23/Dec/19 02:46 PM</dd>
+                    </dl>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <button type="button" class="btn btn-info btn-arrow-right ml-4 mt-3 btn-lg">Comments</button>
+    </div>
+    <div class="row">
+        <div class="col-md-1 mt-4">
+            <i class="fas fa-user-circle fa-3x"></i>
+        </div>
+        <div class="col-md-11 mt-4 formdiv">
+            <p class="pstyle">
+                I'm getting these warnings, too, but the applica&on seems to work.Does this have any effect on the date conversions?
+            </p>
+            <div class="divmuted">
+                <p class="text-muted"> Namith added a comment - 08/Nov/19 8:50 AM</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1 mt-4">
+            <i class="fas fa-user-circle fa-3x"></i>
+        </div>
+        <div class="col-md-11  mt-4 formdiv">
+            <p class="pstyle"> Spring Data commons registers the java.&me converters by default for quite some &me now and considers them simple types that can be handled by the store itself.
+            </p>
+            <div class="divmuted">
+                <p class="text-muted"> Pavan K added a comment - 09/Nov/19 8:50 AM</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1 mt-4">
+            <i class="fas fa-user-circle fa-3x"></i>
+        </div>
+        <div class="col-md-11  mt-4 formdiv">
+            <p class="pstyle"> Spring Data MongoDB, which we fixed there with the last release. As a side effect, the warnings now appear again.
+            </p>
+            <div class="divmuted">
+                <p class="text-muted"> Navay added a comment - 08/Nov/19 8:50 AM</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr class="hrline">
+    <div class="text-muted ml-3 mb-3"><b>Enter comment</b></div>
+    <div class="row">
+        <div class="col-md-10" style="margin-top:-1cm">
+            <ckeditor [editor]="Editor" data="" style="margin-left: 8mm;"></ckeditor>
+        </div>
+        <div class="float-right ml-4 mt-4">
+            <button class="btn postbtn">
+                <i class="fas fa-edit" aria-hidden="true" style="color: white;"></i>&nbsp;
+                <b>Post</b>
+            </button>
+        </div>
+    </div>
+    <br><br><br>
+</div>

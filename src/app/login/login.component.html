@@ -14,7 +14,7 @@
                 <label>
                     <h5>Email ID</h5>
                 </label>
-                <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted}">
+                <input type="text" #user class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted}">
                 <div *ngIf="email.invalid && (email.dirty || email.touched)">
                     <span class="text-danger" *ngIf="email.errors.required">Email / Username is required</span>
                     <span class="text-danger" *ngIf="email.errors.email">Enter vaild Email</span>
@@ -24,7 +24,7 @@
                 <label>
                     <h5>Password</h5>
                 </label>
-                <input type="text" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted}" type="password">
+                <input type="text" #pass class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted}" type="password">
                 <div *ngIf="password.invalid && (password.dirty || password.touched)">
                     <span class="text-danger" *ngIf="password.errors.required">Password is required</span>
                     <span class="text-danger" *ngIf="password.errors.minlength">Password Must contain more then 5 characters</span>
@@ -34,7 +34,7 @@
             </div>
             <input type="checkbox">Remember me
             <a routerLink='/forgot' style="float: right;"><u>Forgot your password?</u></a>
-            <button class=" btn btn-secondary btn-lg bg-success  logbtn" (click)="GoTopage('registerform')" type="submit" [disabled]="loginForm.invalid"><b style="color: white;">LOGIN</b></button><br>
+            <button class=" btn btn-secondary btn-lg bg-success  logbtn" (click)="check(email.value,password.value)" type="submit" [disabled]="loginForm.invalid"><b style="color: white;">LOGIN</b></button><br>
             <button class="btn btn-primary mt-3 btn-lg regbtn" (click)="GoTopage('registerinfo')"><b style="color: white;">Register Now</b></button>
         </fieldset>
     </form>

@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
   details:details[];
   loginForm:FormGroup;
   submitted=false;
+  
+
   constructor(private router:Router,private formdetails:FormdetailsService,private formbuilder:FormBuilder) { 
   }
   ngOnInit() {
@@ -23,15 +25,17 @@ export class LoginComponent implements OnInit {
     email:['',[Validators.required,Validators.email]],
     password:['',[Validators.required,Validators.minLength(5)]]
   })
-  this.getelements();
+
 }
   GoTopage(pagename:string){
     this.router.navigate([`${pagename}`]);
   }
   onSubmit() {
+    this.check
     this.submitted = true;
     if (this.loginForm.invalid) { 
       return;
+      
     }
 }
 get email(){
@@ -40,8 +44,16 @@ get email(){
 get password(){
   return this.loginForm.get('password');
 }
-getelements(){
-  let passwrd=localStorage.getItem("pwd");
-  let usernme=localStorage.getItem("pwd");
+
+check(user,pass){
+  let passwrd=JSON.parse(localStorage.getItem("pwd"));
+  let usernme=JSON.parse(localStorage.getItem("usr"));
+  if(user == usernme && passwrd == pass){
+    this.router.navigateByUrl('registerform')
+  }
+  else{
+    this.router.navigateByUrl('/')
+  }
 }
 }
+

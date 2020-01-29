@@ -14,9 +14,17 @@ export class EditorpageComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
+
   }
 
   GoTopage(pagename:string){
     this.router.navigate([`${pagename}`]);
+  }
+
+  submit(problem,Priority){
+    console.log(Priority)
+    localStorage.setItem("problem",JSON.stringify(problem))
+    localStorage.setItem("Priority",JSON.stringify(Priority))
+
   }
 }

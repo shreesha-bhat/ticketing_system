@@ -20,20 +20,28 @@ export class LoginComponent implements OnInit {
       this.details=data;
   });
    this.loginForm=this.formbuilder.group({
-    username:['',Validators.required],
-    password:['',Validators.required]
+    email:['',[Validators.required,Validators.email]],
+    password:['',[Validators.required,Validators.minLength(5)]]
   })
+  this.getelements();
 }
   GoTopage(pagename:string){
     this.router.navigate([`${pagename}`]);
-  }
-  get f() { 
-    return this.loginForm.controls; 
   }
   onSubmit() {
     this.submitted = true;
     if (this.loginForm.invalid) { 
       return;
     }
+}
+get email(){
+  return this.loginForm.get('email');
+}
+get password(){
+  return this.loginForm.get('password');
+}
+getelements(){
+  let passwrd=localStorage.getItem("pwd");
+  let usernme=localStorage.getItem("pwd");
 }
 }

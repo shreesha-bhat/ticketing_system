@@ -5,6 +5,7 @@ import { DataTableModule } from 'ng-angular8-datatable';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms'
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,7 +15,9 @@ import { RegisterinfoComponent } from './registerinfo/registerinfo.component';
 import { RegisterformComponent } from './registerform/registerform.component';
 import { EditorpageComponent } from './editorpage/editorpage.component';
 import { CommentpageComponent } from './commentpage/commentpage.component';
+import { StorageServiceModule} from 'angular-webstorage-service';
 
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +36,9 @@ import { CommentpageComponent } from './commentpage/commentpage.component';
     DataTableModule,
     CKEditorModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    StorageServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

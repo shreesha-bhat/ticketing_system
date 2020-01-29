@@ -31,14 +31,14 @@
     -o-transform: rotate(225deg);
     -ms-transform: rotate(225deg);
     transform: rotate(225deg);
-    top: 395px;
+    top: 399px;
     right: 858px;
     z-index: 1;
 }
 
 .btn-arrow-right:before {
     left: 24px;
-    top: 395px;
+    top: 399px;
     background-color: white;
 }
 
@@ -87,4 +87,12 @@
     margin-top: 20px;
     margin-right: 60px;
     color: white;
+}
+
+fieldset.frmborder {
+    border: 1px dashed #d6d6d6;
+}
+
+* {
+    color: #00303f;
 }

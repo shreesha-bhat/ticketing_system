@@ -83,17 +83,17 @@
                     </div>
                 </td>
                 <td *ngIf="d.priority=='Medium' ">
-                    <div class="btn btn-warning ">
+                    <div class="btn btn-warning text-white">
                         {{d.priority}}
                     </div>
                 </td>
                 <td *ngIf="d.status=='In progress' ">
-                    <div style="color: greenyellow;">
+                    <div class="text-warning">
                         {{d.status}}
                     </div>
                 </td>
                 <td *ngIf="d.status=='Closed' ">
-                    <div style="color: #AF473C; ">
+                    <div class="text-success">
                         {{d.status}}
                     </div>
                 </td>

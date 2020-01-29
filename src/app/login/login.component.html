@@ -11,14 +11,26 @@
                 <b style="font-size: larger;">LOGIN</b>
             </legend>
             <div class="form-group">
-                <label>Username or Email ID</label>
-                <input type="text" formControlName="username" class="form-control" [ngClass]="{'is-invalid': submitted}">
-                <div *ngIf="f.username.required || (f.username.dirty || f.username.touched)">Username is required</div>
+                <label>
+                    <h5>Email ID</h5>
+                </label>
+                <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted}">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                    <span class="text-danger" *ngIf="email.errors.required">Email / Username is required</span>
+                    <span class="text-danger" *ngIf="email.errors.email">Enter vaild Email</span>
+                </div>
             </div>
             <div class="form-group">
-                <label>Password</label>
-                <input type="text" formControlName="password" class="form-control mb-2" [ngClass]="{ 'is-invalid': submitted}">
-                <div *ngIf="f.password.required|| (f.password.dirty || f.password.touched)" class="text-danger">Password is required</div>
+                <label>
+                    <h5>Password</h5>
+                </label>
+                <input type="text" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted}" type="password">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <span class="text-danger" *ngIf="password.errors.required">Password is required</span>
+                    <span class="text-danger" *ngIf="password.errors.minlength">Password Must contain more then 5 characters</span>
+                    <span class="text-danger" *ngIf="password.errors.pattern"> Must contain atleast 1 Special Character</span>
+                </div>
+
             </div>
             <input type="checkbox">Remember me
             <a routerLink='/forgot' style="float: right;"><u>Forgot your password?</u></a>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule,HttpClient} from '@angular/common/http';
 import { DataTableModule } from 'ng-angular8-datatable';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +31,9 @@ import { CommentpageComponent } from './commentpage/commentpage.component';
     AppRoutingModule,
     HttpClientModule,
     DataTableModule,
-    CKEditorModule
+    CKEditorModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

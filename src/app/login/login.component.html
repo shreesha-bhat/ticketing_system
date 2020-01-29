@@ -1,7 +1,8 @@
-<app-header></app-header>
+<app-header>
+</app-header>
 
-<div class="col-md-4 offset-4 col-sm-4 offset-4 col-xs-4 offset-4">
-    <form class="col offset-0 col-xs-12 offset-0 frmstyle">
+<div class="col-md-4 offset-4 frmstyle">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div style="margin-left: 35%;margin-top: -100px;">
             <img src="./assets/laptop.png">
         </div>
@@ -11,18 +12,18 @@
             </legend>
             <div class="form-group">
                 <label>Username or Email ID</label>
-                <input type="text" class="form-control">
+                <input type="text" formControlName="username" class="form-control" [ngClass]="{'is-invalid': submitted}">
+                <div *ngIf="f.username.required || (f.username.dirty || f.username.touched)">Username is required</div>
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="text" class="form-control mb-2">
-                <input type="checkbox">Remember me
-                <a routerLink='/forgot' style="float: right;"><u>Forgot your password?</u></a>
+                <input type="text" formControlName="password" class="form-control mb-2" [ngClass]="{ 'is-invalid': submitted}">
+                <div *ngIf="f.password.required|| (f.password.dirty || f.password.touched)" class="text-danger">Password is required</div>
             </div>
-
-            <button class=" btn btn-secondary btn-lg bg-success  logbtn" (click)="GoTopage('registerform')"><b style="color: white;">LOGIN</b></button><br>
+            <input type="checkbox">Remember me
+            <a routerLink='/forgot' style="float: right;"><u>Forgot your password?</u></a>
+            <button class=" btn btn-secondary btn-lg bg-success  logbtn" (click)="GoTopage('registerform')" type="submit" [disabled]="loginForm.invalid"><b style="color: white;">LOGIN</b></button><br>
             <button class="btn btn-primary mt-3 btn-lg regbtn" (click)="GoTopage('registerinfo')"><b style="color: white;">Register Now</b></button>
-
         </fieldset>
     </form>
 </div>

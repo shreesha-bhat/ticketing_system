@@ -27,7 +27,7 @@
     "angular-webstorage-service": "^1.0.2",
     "bootstrap": "^4.4.1",
     "ckeditor4-angular": "^1.0.1",
-    "datatables.net": "^1.10.20",
+    "datatables.net": "^1.11.3",
     "datatables.net-dt": "^1.10.20",
     "ng-angular8-datatable": "^0.9.11",
     "ngx-ckeditor": "^8.0.0",
